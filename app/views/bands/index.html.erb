@@ -1,0 +1,9 @@
+<h1>Welcome <%= current_user.email %> </h1>
+<% unless Band.all.empty? %>
+<ul>
+  <% Band.all.each do |band| %>
+  <li><%= link_to band.name, band_url(band)%></li>
+  <% end %>
+</ul>
+<% end %>
+<%= button_to "Log out", new_session_url, method: :get %>

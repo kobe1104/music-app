@@ -1,0 +1,11 @@
+
+<form action="<%=action%>", method="<%=method%>">
+  <%= render "shared/errors" %>
+  <label for="user_email">Email</label>
+  <input type=text name="user[email]" id="user_email">
+
+  <label for="user_password">Password</label>
+  <input type=text name="user[password]" id ="user_password">
+
+  <input type="submit">
+</form>

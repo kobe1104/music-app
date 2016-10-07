@@ -1,0 +1,29 @@
+<form action="<% action %>" method="post">
+<!-- a list of albums -->
+<!-- some links that allow you to updat/create etc -->
+  <!-- print out the name of current scope (band, album...) -->
+  <h1><%= band.name %></h1>
+
+  <!-- list albums -->
+  <% unless band.albums.empty? %>
+  <label for="albums">Albums</label>
+    <ul>
+      <% band.albums.each do |album| %>
+        <li><%= link_to album.album_name, album_url %></li>
+      <% end %>
+    </ul>
+  <% end %>
+
+
+
+
+  <!-- edit stuffs -->
+  <label for="links">Links</label>
+  <ul>
+    <li><%= link_to "New Track", tracks_url, method: :post%></li>
+    <li><%= link_to "Edit Album", edit_album_url, method: :get%></li>
+    <li><%= link_to "Delete Album", album_url, method: :delete%></li>
+    <li><%= link_to "All Bands", bands_url, method: :get %></li>
+  </ul>
+
+</form>

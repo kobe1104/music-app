@@ -1,0 +1,8 @@
+<!-- <h1><%= @band.name %></h1>
+
+<ul>
+  <% @albums.each do |album| %>
+      <li><%= album.album_name %></li>
+  <% end %>
+</ul> -->
+<%= render "shared/form_band", band: @band, action: band_url %>

@@ -1,0 +1,4 @@
+<h1>Welcome ! <%= current_user.email %></h1>
+
+<%= link_to "Go to all bands", bands_url, method: :get %>
+<%= button_to "Log out", session_url, method: :delete %>
